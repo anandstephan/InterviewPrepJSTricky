@@ -1,6 +1,6 @@
-//Closure in js
+// Closure in js
 
-//Question 1 //Guess the Output
+// Question 1 //Guess the Output
 // let count = 0;
 // (function printCount(){
 //     if(count===0){
@@ -33,7 +33,7 @@
 //     }
 // }
 
-//Question 3 // Time Optimization
+// Question 3 // Time Optimization
 // function find(index){ //Old Implmentation
 //     let a = []
 //     for(let i=0;i<10000000;i++){
@@ -50,7 +50,7 @@
 // find(50)
 // console.timeEnd("50")
 
-//new Implmentation
+// new Implmentation
 
 // function find(){
 //     let a = []
@@ -72,7 +72,7 @@
 // closure(50)
 // console.timeEnd("50")
 
-//Question 4 //Guess the Output
+// Question 4 //Guess the Output
 // function a(){
 //     for(var i=0;i<=5;i++){
 //         setTimeout(()=>console.log(i),i*1000)
@@ -85,7 +85,7 @@
 //             }
 //         }
 
-//without let keyword
+// without let keyword
 // function a(){
 //     for(var b=0;b<=5;b++){
 //         console.log(b)
@@ -98,7 +98,7 @@
 // }
 // a() // important point console with b and without b
 
-//Question 5 //make the private variable
+// Question 5 //make the private variable
 // function counter(){
 //     var _count=0
 
@@ -114,9 +114,9 @@
 // const c = counter()
 // c.add(3)
 
-//Question 6 //What is Module Pattern(Definition with use case)
+// Question 6 //What is Module Pattern(Definition with use case)
 
-//Question 7 Once function polyfill
+// Question 7 Once function polyfill
 
 // function once(fn,context){
 //     let ran;
@@ -139,7 +139,7 @@
 // console.log(sayHi())
 // console.log(sayHi())
 
-//Question 8 implmentation of memoize function
+// Question 8 implmentation of memoize function
 
 // const memoizedFn = function(fn,context){
 //     const res = {}
@@ -169,12 +169,12 @@
 // console.log(testFn(3,5))
 // console.timeEnd("Start")
 
-//Question 9 Explain Closure and scope with example of code
+// Question 9 Explain Closure and scope with example of code
 
-//+++++++++++++++++++++++++++++++++++POLYFILL+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//PolyFill
+// +++++++++++++++++++++++++++++++++++POLYFILL+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// PolyFill
 
-//Question 1 // map Prototype
+// Question 1 // map Prototype
 // Array.prototype.myMap = function(cb){
 //     let newarr = []
 //     for(let i=0;i<this.length;i++) newarr.push(cb(arr[i]))
@@ -184,7 +184,7 @@
 // const newarr = arr.myMap(item => item*2)
 // console.log(newarr)
 
-//Question 2 //Filter Prototype
+// Question 2 //Filter Prototype
 
 // Array.prototype.myFilter = function(cb){
 //     let newarr = []
@@ -219,23 +219,23 @@
 
 // console.log(result);
 
-//+++++++++++++++++++++++++++Function++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++Function++++++++++++++++++++++++++++
 
-//Question 1 Guess the output
+// Question 1 Guess the output
 // (function (x) {
 //   return (function (y) {
 //     console.log(y);
 //   })(2);
 // })(1);
 
-//Question 2 Guess the output
+// Question 2 Guess the output
 // for (let i = 0; i <= 5; i++) {
 //   setTimeout(function () {
 //     console.log(i);
 //   }, i * 1000);
 // }
 
-//Question 3 Example of spread operator in the context of function
+// Question 3 Example of spread operator in the context of function
 
 // function multiply(num1, ...num2) { // num2 using rest operator to take all the value in the array
 //   console.log(num1, num2);
@@ -245,7 +245,7 @@
 // const arr = [5, 6];
 // console.log(multiply(4, ...arr)); // important point spread operator is always the second parameter in the function call()
 
-//Question 4 Output Question
+// Question 4 Output Question
 // const fn = (a,...num,x,y) =>{
 //     console.log(a,...nums)
 // }
@@ -254,8 +254,8 @@
 // };
 // fn(1, 2, 4, 5, 8);
 
-//+++++++++++++++++++++++++++++++++++This keyword++++++++++++++++++++++++
-//Question 1 Guess the Output
+// +++++++++++++++++++++++++++++++++++This keyword++++++++++++++++++++++++
+// Question 1 Guess the Output
 // const user = {
 //   firstName: "steve",
 //   getName() {
@@ -265,7 +265,7 @@
 // };
 // console.log(user.getName());
 
-//Question 2 Guess the Output
+// Question 2 Guess the Output
 
 // function makeUser() {
 //   return {
@@ -281,7 +281,7 @@
 // let user = makeUser();
 // console.log(user);
 
-//Question 3  Guess the Output
+// Question 3  Guess the Output
 // const user = {
 //   name: "Steve",
 //   logMessage() {
@@ -289,14 +289,14 @@
 //   },
 // };
 // setTimeout(user.logMessage, 1000);
-//Solution
+// Solution
 // setTimeout(user.logMessage.bind(user), 1000);
 // setTimeout(() => user.logMessage(), 1000);
 // setTimeout(function () {
 //   user.logMessage();
 // }, 1000);
 
-//Question 4
+// Question 4
 // const user = {
 //   name: "steve",
 //   greet() {
@@ -310,7 +310,7 @@
 // console.log(user.greet());
 // console.log(user.farewell());
 
-//Question 5
+// Question 5
 
 // var length = 4;
 
@@ -326,7 +326,7 @@
 // };
 // obj.method(callback);
 
-//Question 6
+// Question 6
 
 // let calc = {
 //   total: 0,
@@ -351,9 +351,9 @@
 // const result = calc.add(5).sub(4).mul(10).div(2);
 // console.log(result.total);
 
-//+++++++++++++++++++++Object++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++Object++++++++++++++++++++++++++++++++++++++++
 
-//Question 1 Create a function multiplyByTwo(obj) that multpiles all numeric property values of nums by 2
+// Question 1 Create a function multiplyByTwo(obj) that multpiles all numeric property values of nums by 2
 
 // let nums = {
 //   a: 100,
@@ -369,7 +369,7 @@
 // multiplyByTwo(nums);
 // console.log(nums);
 
-//Question 2  Guess the output
+// Question 2  Guess the output
 
 // const a = {};
 // const b = { key: "b" };
@@ -382,12 +382,12 @@
 // Question 3 Guess the output
 // console.log([..."steve"]);
 
-//Question 4 Guess the output
+// Question 4 Guess the output
 // const user = { name: "steve", age: 21 };
 // const admin = { admin: true, ...user };
 // console.log(admin);
 
-//Question 5 Guess the output
+// Question 5 Guess the output
 // const settings = {
 //   username: "piyush",
 //   level: 19,
@@ -396,33 +396,33 @@
 // const data = JSON.stringify(settings, ["level", "health"]);
 // console.log(settings);
 
-//Question 6 Guess the output
+// Question 6 Guess the output
 // function getItems(fruitList, favoriteList, ...args) {
 //   return [...fruitList, ...args, favoriteList];
 // }
 
 // console.log(getItems(["banana", "apple"], "pears", "orange", "chowmein"));
 
-//Question 7 Guess the output
+// Question 7 Guess the output
 // let c = { greeting: "hi" };
 // let d;
 // d = c;
 // c.greeting = "hello";
 // console.log(d.greeting);
 
-//Question 8 Guess the output
+// Question 8 Guess the output
 // console.log({ a: 1 } == { a: 1 });
 // console.log({ a: 1 } === { a: 1 });
 
-//Question 9 Guess the output //Confuision
+// Question 9 Guess the output //Confuision
 // let person = { name: "Steve" };
 // const member = [person];
 // person = null;
-//person.name=null
+// person.name=null
 
 // console.log(member);
 
-//Question 10 Guess the output //Confusion
+// Question 10 Guess the output //Confusion
 // const value = { number: 10 };
 
 // const multiply = (x = { ...value }) => {
@@ -434,13 +434,13 @@
 // multiply(value);
 // multiply(value);
 
-//Question 11 What is shallow copy and deep copy
+// Question 11 What is shallow copy and deep copy
 
 // let user = {
 //   name: "Steve",
 //   salary: "1cr",
 // };
-//Object.Assign
+// Object.Assign
 // let newObj = Object.assign({}, user); // Note : This will not clone nested Object
 // newObj.name = "Anand";
 // console.log(newObj, user);
@@ -450,12 +450,12 @@
 // newObj.name = "Anand";
 // console.log(newObj, user);
 
-//Rest Operator
+// Rest Operator
 // const newObj = { ...user };
 // newObj.name = "Anand";
 // console.log(newObj, user);
 
-//Question 12 Guess the output confusion
+// Question 12 Guess the output confusion
 
 // function changeAgeAndRef(person) {
 //   person.age = 25;
