@@ -20,7 +20,6 @@
 //     console.log(a,b)
 // })()
 
-
 // Question 2 implmentation of createBase
 
 // let addSix = createBase(6)
@@ -33,7 +32,6 @@
 //         return x+y
 //     }
 // }
-
 
 //Question 3 // Time Optimization
 // function find(index){ //Old Implmentation
@@ -87,7 +85,7 @@
 //             }
 //         }
 
-//without let keyword 
+//without let keyword
 // function a(){
 //     for(var b=0;b<=5;b++){
 //         console.log(b)
@@ -161,7 +159,6 @@
 //     return a*b;
 // }
 
-
 // const testFn = memoizedFn(clumssyProduct)
 
 // console.time("Start")
@@ -174,9 +171,8 @@
 
 //Question 9 Explain Closure and scope with example of code
 
-
 //+++++++++++++++++++++++++++++++++++POLYFILL+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//PolyFill 
+//PolyFill
 
 //Question 1 // map Prototype
 // Array.prototype.myMap = function(cb){
@@ -206,5 +202,19 @@
 
 // Question 3 // Reduce Prototype
 
-// const arr = [1,2,3,4]
-// arr.reduce(item => item)
+// const arr = [1, 2, 3, 4];
+
+// Array.prototype.myReduce = function (cb, initial) {
+//   let acc = initial;
+//   let result = acc;
+//   for (let i = 0; i < this.length; i++) {
+//     result = cb(result, this[i]);
+//   }
+//   return result;
+// };
+
+// const result = arr.myReduce((acc, curr) => {
+//   return acc + curr;
+// }, 0);
+
+// console.log(result);
