@@ -64,12 +64,20 @@ function TwoSum(arr, target) {
   //   return false;
 
   //Time Complexity of O(n) with space complexity of O(N)
-  let obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    obj[arr[i]] = i;
-  }
-
+  // let obj = {};
+  // for (let i = 0; i < arr.length; i++) {
+  //   obj[arr[i]] = i;
+  // }
+  // const result = []
+  // for(let i=0;i<arr.length;i++){
+  //   const newtarget = target - arr[i]
+  //   if(obj[newtarget]){
+  //     result.push(obj[newtarget])
+  //     result.push(i)
+  //   }
+  // }
+  // return result
 
 }
-
+  
 console.log(TwoSum([2, 7, 11, 15], 9));

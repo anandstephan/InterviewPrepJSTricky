@@ -107,3 +107,74 @@
 // const newresult = [];
 // flattenArray(arr, newresult);
 // console.log(newresult);
+
+
+//+++++++++++++++++++++++++++Second Video++++++++++++++++++++++
+//https://www.youtube.com/watch?v=_tNErId8xlc&list=PL4CFloQ4GGWIXCJJHwT6FPb5yVZcybuQW&index=2
+// Question 1 Guess the output
+// let obj = {
+//     helloWorld:function(){
+//         console.log('Hi World',this.name)
+//     },
+//     name:"Anand"
+// }
+// let obj2 = {
+//     helloWorld:obj.helloWorld.bind(obj),
+//     name:"stephan"
+// }
+// obj2.helloWorld()
+
+//Question 2 complete the function compute
+
+function compute(amount){
+    this.total = amount
+    this.lacs= function(amt){
+        this.total +=amt
+        return this
+    }
+    this.crore= function(amt){
+        this.total +=amt
+        return this
+    }
+    this.thousand= function(amt){
+        this.total +=amt
+        return this
+    }
+    this.value = function(){
+        return this.total.toString()
+    }
+    return this
+}
+
+// console.log(compute(300).crore(200).lacs(2).thousand(44).value())
+
+//function to mimmic two way binding
+
+let input = document.getElementById("input")
+
+let uibindObj = {
+    value:"test"
+}
+let heading = document.getElementById("heading")
+heading.innerText = uibindObj.value
+
+function changeObjValToInput(state,input){
+    Object.defineProperty(state,'value',{
+        get(){
+            return state.value
+        },
+        set(newVal){
+                console.log("newval",this)
+                input.value = newVal
+                state.value = newVal    
+                console.log("af",this)
+            return;
+        }
+    })
+
+    input.addEventListener("input",function(e){
+        // console.log(e.target.value)
+        uibindObj.value = e.target.value
+    })
+}
+changeObjValToInput(uibindObj,input)
