@@ -473,5 +473,101 @@
 
 // const person2 = changeAgeAndRef(person1);
 // console.log(person1, person2);
+//+++++++++++++++++++Event Propogation++++++++++++++++++++++++++++++++
+let btn = document.getElementById("btn");
+let form = document.querySelector("form");
+let div = document.querySelector("div");
 
+//Event Bubbling from inner to outer
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log("Btn Clicked!!!");
+// });
+// form.addEventListener("click", (e) => {
+//   console.log("Form Clicked!!!");
+//   e.preventDefault();
+// });
 
+// div.addEventListener("click", (e) => {
+//   console.log("Div Clicked!!!");
+//   e.preventDefault();
+// });
+
+// Therory Question --> Name few event that is not bubble
+
+//Question 2 what is differece between e.target vs e.currentTarget vs this.target
+// function func(e) {
+//   e.preventDefault();
+//   console.log(e.target.tagName, e.currentTarget.tagName, this.tagName);
+// }
+
+// btn.addEventListener("click", func);
+// form.addEventListener("click", func);
+
+// div.addEventListener("click", func);
+
+//Question 3 What is event Trickling
+// btn.addEventListener(
+//   "click",
+//   (e) => {
+//     e.preventDefault();
+//     console.log("Btn Clicked!!!");
+//   },
+//   { capture: true }
+// );
+// form.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Form Clicked!!!");
+//     e.preventDefault();
+//   },
+//   { capture: true }
+// );
+
+// div.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Div Clicked!!!");
+//     e.preventDefault();
+//   },
+//   { capture: true }
+// );
+
+//Question 4 how to stop event Propogation
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   console.log("Btn Clicked!!!");
+// });
+// form.addEventListener("click", (e) => {
+//   console.log("Form Clicked!!!");
+//   e.preventDefault();
+//     e.stopPropagation();
+// });
+
+// div.addEventListener("click", (e) => {
+//   console.log("Div Clicked!!!");
+//   e.preventDefault();
+// });
+
+//Question 5 // Output
+
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log("Btn Clicked!!!");
+// });
+// form.addEventListener(
+//   "click",
+//   (e) => {
+//     console.log("Form Clicked!!!");
+//     e.preventDefault();
+//   },
+//   { capture: true }
+// );
+
+// div.addEventListener("click", (e) => {
+//   console.log("Div Clicked!!!");
+//   e.preventDefault();
+// });
+
+//Question 6 Event Deligination
