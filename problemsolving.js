@@ -62,7 +62,6 @@ function TwoSum(arr, target) {
   //     }
   //   }
   //   return false;
-
   //Time Complexity of O(n) with space complexity of O(N)
   // let obj = {};
   // for (let i = 0; i < arr.length; i++) {
@@ -77,7 +76,21 @@ function TwoSum(arr, target) {
   //   }
   // }
   // return result
-
 }
-  
-console.log(TwoSum([2, 7, 11, 15], 9));
+
+// console.log(TwoSum([2, 7, 11, 15], 9));
+
+//Question 4  Maximum Subarray // Sumeet Malik Solution
+var maxSubArray = function (arr) {
+  let csum = arr[0];
+  let osum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (csum >= 0) {
+      csum += arr[i];
+    } else {
+      csum = arr[i];
+    }
+    if (csum > osum) osum = csum;
+  }
+  return osum;
+};
