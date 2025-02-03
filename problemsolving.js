@@ -80,7 +80,7 @@ function TwoSum(arr, target) {
 
 // console.log(TwoSum([2, 7, 11, 15], 9));
 
-//Question 4  Maximum Subarray // Sumeet Malik Solution
+//Question 5  Maximum Subarray // Sumeet Malik Solution
 var maxSubArray = function (arr) {
   let csum = arr[0];
   let osum = arr[0];
@@ -94,3 +94,5 @@ var maxSubArray = function (arr) {
   }
   return osum;
 };
+
+
